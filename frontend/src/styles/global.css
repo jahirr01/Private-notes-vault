@@ -1,0 +1,260 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(
+    circle at top,
+    #020617 0%,
+    #020617 40%,
+    #020617 100%
+  );
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+/* =========================
+   CENTER (LOGIN PAGE FIX)
+========================= */
+.center {
+  min-height: 100vh;          /* FULL SCREEN */
+  width: 100%;
+  display: flex;
+  justify-content: center;    /* HORIZONTAL CENTER */
+  align-items: center;        /* VERTICAL CENTER */
+  padding: 20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 22px 80px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.nav {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.95),
+    rgba(2, 6, 23, 0.9)
+  );
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  padding: 16px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+p {
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* =========================
+   BUTTONS (TEXT CENTER FIX)
+========================= */
+button {
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  color: #020617;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;              /* ENSURE CENTER */
+  align-items: center;        /* VERTICAL CENTER */
+  justify-content: center;    /* HORIZONTAL CENTER */
+
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: rgba(15, 23, 42, 0.85);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+button.danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+/* =========================
+   CARD (LOGIN + CREATE NOTE)
+========================= */
+.card {
+  background: radial-gradient(
+    circle at top left,
+    rgba(15, 23, 42, 0.95),
+    rgba(2, 6, 23, 0.95)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding: 28px;
+  box-shadow:
+    inset 0 0 0 1px rgba(56, 189, 248, 0.05),
+    0 20px 60px rgba(2, 6, 23, 0.9);
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+textarea {
+  width: 100%;
+  background: rgba(2, 6, 23, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 14px;
+  padding: 14px 16px;
+  color: #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #64748b;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+/* =========================
+   NOTES GRID
+========================= */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   NOTE CARD
+========================= */
+.note {
+  background: radial-gradient(
+    circle at top right,
+    rgba(15, 23, 42, 0.95),
+    rgba(2, 6, 23, 0.95)
+  );
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.note:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(2, 6, 23, 0.8);
+}
+
+.note::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+}
+
+/* =========================
+   NOTE ACTIONS
+========================= */
+.note-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* =========================
+   VIEW NOTE PAGE
+========================= */
+.note-view {
+  background: radial-gradient(
+    circle at top,
+    rgba(15, 23, 42, 0.95),
+    rgba(2, 6, 23, 0.95)
+  );
+  border-radius: 22px;
+  padding: 32px;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 16px 60px;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
