@@ -1,6 +1,8 @@
 # Private Notes Vault
 
-Secure full-stack notes app using React and Supabase.
+# Live Link : https://rad-croissant-11e127.netlify.app/
+
+A secure private notes web app built with React and Supabase, featuring authentication and user-scoped data access.
 
 ## Setup
 1. Add Supabase keys in frontend/.env
